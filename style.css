@@ -69,39 +69,41 @@ body {
 
 .title {
     font-family: var(--title-font);
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
     margin-bottom: 1rem;
     color: var(--primary);
 }
 
 .messageText {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     margin-bottom: 2rem;
     line-height: 1.5;
 }
 
 .question-text {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
     margin-bottom: 2rem;
 }
 
 .buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     position: relative;
     min-height: 60px;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     font-weight: 600;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     font-family: var(--body-font);
+    white-space: nowrap;
 }
 
 .btn.primary {
@@ -269,5 +271,36 @@ body {
 @keyframes fall {
     to {
         transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .glass {
+        padding: 2rem 1.5rem;
+    }
+    
+    .envelope {
+        width: 160px;
+        height: 120px;
+    }
+    
+    .envelope .top {
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-top-width: 60px;
+    }
+    
+    .envelope .front {
+        width: 160px;
+        height: 120px;
+    }
+    
+    .celebration-text {
+        font-size: 2.2rem;
     }
 }
