@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="flower-container"></div>
+
+    <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope" id="envelope">
+            <div class="front"></div>
+            <div class="top"></div>
+            <div class="card-hint">
+                <div class="heart">❤️</div>
+            </div>
+        </div>
+        <p class="envelope-text">Tienes una carta amorcín... haz clic para abrirla</p>
+    </div>
+    
+    <main class="container hidden" id="mainCard">
+        <div class="card glass">
+            <div id="intro-content">
+                <div class="flower-icon">
+                    <svg viewBox="0 0 100 100" class="main-flower">
+                        <!-- Clavel (Carnation) SVG -->
+                        <g class="petals-clavel">
+                            <!-- Outer layer of ruffled petals -->
+                            <path d="M50 50 Q60 20 75 35 T85 55 Q70 70 50 50" fill="#ff4d6d" opacity="0.8">
+                                <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite" />
+                            </path>
+                            <path d="M50 50 Q40 20 25 35 T15 55 Q30 70 50 50" fill="#ff4d6d" opacity="0.8" transform="rotate(72 50 50)" />
+                            <path d="M50 50 Q20 40 35 25 T55 15 Q70 30 50 50" fill="#ff4d6d" opacity="0.8" transform="rotate(144 50 50)" />
+                            <path d="M50 50 Q80 60 65 75 T45 85 Q30 70 50 50" fill="#ff758f" opacity="0.9" transform="rotate(216 50 50)" />
+                            <path d="M50 50 Q20 60 35 75 T55 85 Q70 70 50 50" fill="#ff758f" opacity="0.9" transform="rotate(288 50 50)" />
+                            
+                            <!-- Middle layer for texture -->
+                            <path d="M50 50 Q55 35 65 40 T70 55 Q60 65 50 50" fill="#c9184a" transform="rotate(36 50 50)" />
+                            <path d="M50 50 Q45 35 35 40 T30 55 Q40 65 50 50" fill="#c9184a" transform="rotate(108 50 50)" />
+                            <path d="M50 50 Q35 45 40 35 T55 30 Q65 40 50 50" fill="#c9184a" transform="rotate(180 50 50)" />
+                            
+                            <!-- Center -->
+                            <circle cx="50" cy="50" r="6" fill="#800f2f" />
+                        </g>
+                    </svg>
+                </div>
+                
+                <h1 class="title">¡Hola bebecita!</h1>
+                <p class="messageText">Tengo una pequeña pero muy importante pregunta para ti...</p>
+            </div>
+            
+            <div class="question-section" id="question">
+                <h2 class="question-text">¿Te gustaría ser mi San Valentín? ❤️</h2>
+                <div class="buttons">
+                    <button id="yesBtn" class="btn primary">¡SÍ!</button>
+                    <button id="noBtn" class="btn secondary">No</button>
+                </div>
+            </div>
+            
+            <div id="success" class="hidden">
+                <h2 class="celebration-text">Perfecto bebecilla! 💖</h2>
+                <p>¡Almorzaremos un pique deli en el nuevo Paquis a las 12:00 AM!</p>
+                <button id="whatsappBtn" class="btn whatsapp">
+                    ¡Avisarle ahora! 📱
+                </button>
+                <div class="hearts-explosion"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
